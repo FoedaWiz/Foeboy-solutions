@@ -1,0 +1,132 @@
+/* Import some modern, bold, tech-friendly fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Anton&display=swap');
+
+:root {
+  --bg-main: #050509;
+  --bg-card: #0d0d15;
+  --accent-primary: #00f5a0;   /* neon green */
+  --accent-secondary: #ff007a; /* magenta/pink */
+  --text-main: #f5f5f5;
+  --text-muted: #9b9b9b;
+  --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+/* Global reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #151520 0, #050509 45%, #000000 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* Think: bold album-title / tour-poster energy */
+h1, .hero-title {
+  font-family: 'Anton', system-ui, sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  color: var(--text-main);
+  text-shadow: 0 0 18px rgba(0, 245, 160, 0.35);
+}
+
+/* Subhead with that confident flex */
+h2, .hero-subtitle {
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent-secondary);
+}
+
+/* Body text */
+p, .body-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Card style – like a tracklist or feature block */
+.card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.9));
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(18px);
+}
+
+/* Accent line – like a parental advisory / label strip */
+.card-header-strip {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Neon button – think “Listen Now” / “Stream” */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 245, 160, 0.4);
+  background: radial-gradient(circle at 10% 0, #00f5a0 0, #00c2ff 40%, #050509 100%);
+  color: #050509;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, filter 0.12s ease-out;
+  box-shadow: 0 0 22px rgba(0, 245, 160, 0.45);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px) scale(1.02);
+  filter: brightness(1.08);
+  box-shadow: 0 0 32px rgba(0, 245, 160, 0.7);
+}
+
+/* Tag / feature label – like “feat. Artist” */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+/* Layout example */
+.hero {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+}

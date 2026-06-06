@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foeboy Creative Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <style>
+    .visually-hidden {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+  </style>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">Foeboy Creative</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="portfolio-hero" id="home">
+    <div class="hero-content">
+      <h1>Foeboy Creative Solutions</h1>
+      <p>High-tech precision meets street-smart strategy</p>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-showcase">
+    <div class="container">
+      <h2 class="section-title">See Our Work in Action</h2>
+      <p class="section-subtitle">High-quality creative content and projects</p>
+      <video class="showcase-video" width="100%" height="auto" controls>
+        <source src="20260128_0242_01kf12x0mcfpkrf4d9qxx8j0ke.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="portfolio-section" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Expert solutions tailored to your needs</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>App Development</h3>
+          <p>Custom mobile and web apps built for performance, scalability, and exceptional user experience.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Workflow Automation</h3>
+          <p>Streamline operations with Make.com, Zapier integrations, and AI-powered workflows.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Website Creation</h3>
+          <p>Modern, responsive websites tailored to your brand. SEO-optimized and built for conversions.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎵</div>
+          <h3>Music Marketing</h3>
+          <p>Authentic strategies, visual branding, and automation for artists. Grow your fanbase effectively.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Project Gallery Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title">Project Highlights</h2>
+      <p class="section-subtitle">Notable works and achievements</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-image gallery-image--web-design"></div>
+          <h3>Web Design</h3>
+          <p>Modern responsive websites</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image gallery-image--video-production"></div>
+          <h3>Video Production</h3>
+          <p>Professional video content</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image gallery-image--graphic-design"></div>
+          <h3>Graphic Design</h3>
+          <p>Creative visual content</p>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image gallery-image--animation"></div>
+          <h3>Animation</h3>
+          <p>Engaging animations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h4>50+</h4>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <h4>30+</h4>
+          <p>Satisfied Clients</p>
+        </div>
+        <div class="stat-card">
+          <h4>1M+</h4>
+          <p>Total Reach</p>
+        </div>
+        <div class="stat-card">
+          <h4>100%</h4>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="portfolio-section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Crafting digital excellence with creativity and precision</p>
+      
+      <div class="about-content">
+        <p>I'm Foeboy, a creative professional dedicated to delivering high-quality digital solutions. With expertise in app development, workflow automation, web design, and music marketing, I help brands and artists reach their full potential.</p>
+        <p>Every project is approached with precision, innovation, and a deep commitment to excellence. I combine technical expertise with creative vision to transform ideas into powerful digital experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="portfolio-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Let's create something amazing together</p>
+      
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p><a href="mailto:hello@foeboy.com">hello@foeboy.com</a></p>
+              <p>We'll respond within 24 hours</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🌐</div>
+            <div class="info-content">
+              <h3>Social Media</h3>
+              <p>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> • 
+                <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> • 
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+              </p>
+              <p>Follow for latest updates</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Collaborate?</h2>
+      <p>Let's turn your vision into reality</p>
+      <a href="#contact" class="cta-btn">Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Foeboy Creative</h4>
+          <p>Creating amazing content and digital experiences</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Foeboy Creative Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

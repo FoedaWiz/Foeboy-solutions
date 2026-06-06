@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Foeboy Creative Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="email-styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="600914151_25774903882116854_6775865547604767452_n.png" alt="Foeboy Logo" />
+      <h1>FOEBOY CREATIVE SOLUTIONS</h1>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="headerNav">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="Portfolio.html">Portfolio</a>
+      <a href="ContactUs.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Let's Work Together <span>To Create Something Amazing</span></h2>
+    <p>Have a project in mind? Get in touch with us and let's bring your ideas to life.</p>
+  </section>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="info-icon">📧</div>
+        <div class="info-content">
+          <h3>Email</h3>
+          <p><a href="mailto:foeboysolutions@gmail.com">foeboysolutions@gmail.com</a></p>
+          <p>We'll respond within 24 hours</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div class="info-content">
+          <h3>Response Time</h3>
+          <p>Quick replies guaranteed</p>
+          <p>Available Monday - Friday, 9am - 6pm</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🌐</div>
+        <div class="info-content">
+          <h3>Social Media</h3>
+          <p><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> • <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> • <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="index.html">Home</a>
+    </div>
+    <p>&copy; 2026 Foeboy Creative Solutions. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+  <script>
+    // EmailJS Configuration
+    // Get your credentials from: https://www.emailjs.com/
+    // 1. Create account at emailjs.com
+    // 2. Create an Email Service (e.g., Gmail)
+    // 3. Get your Public Key from Account Settings
+    // 4. Create an Email Template and get the Template ID
+    
+    const PUBLIC_KEY = 'FIzGj8udiuQ1SjTml'; // Your EmailJS Public Key
+    const SERVICE_ID = 'service_ikr58zf'; // Your EmailJS Service ID
+    const TEMPLATE_ID = 'template_cyxbomr'; // Your EmailJS Template ID
+
+    // Initialize EmailJS
+    emailjs.init(PUBLIC_KEY);
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Show loading state
+      const btn = event.target.querySelector('.btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      try {
+        // Send email using EmailJS
+        const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+          from_name: name,
+          from_email: email,
+          subject: subject,
+          message: message
+        });
+
+        // Success message
+        showMessage('✓ Message sent successfully! I\'ll get back to you soon.', 'success');
+        event.target.reset();
+        
+      } catch (error) {
+        // Error message
+        console.error('Error:', error);
+        showMessage('✗ Failed to send message. Please try again or email directly at foedaspitta@gmail.com', 'error');
+      } finally {
+        // Reset button
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    function showMessage(text, type) {
+      // Remove existing message if any
+      const existing = document.querySelector('.form-message');
+      if (existing) existing.remove();
+
+      // Create message element
+      const messageEl = document.createElement('div');
+      messageEl.className = `form-message ${type}`;
+      messageEl.textContent = text;
+      messageEl.style.cssText = `
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        font-weight: 500;
+        animation: slideIn 0.3s ease;
+        ${type === 'success' 
+          ? 'background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid #10b981;' 
+          : 'background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid #ef4444;'
+        }
+      `;
+
+      // Insert at top of form
+      const form = document.querySelector('.contact-form');
+      form.insertBefore(messageEl, form.firstChild);
+
+      // Auto-remove success message after 4 seconds
+      if (type === 'success') {
+        setTimeout(() => messageEl.remove(), 4000);
+      }
+    }
+
+    // Add animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
