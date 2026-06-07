@@ -647,15 +647,18 @@ body::before {
   box-shadow: 0 8px 30px rgba(0,0,0,0.35);
   object-fit: cover;
 }
-.about-text p {
-  margin-bottom: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
+ .about-intro-video {
+   margin-bottom: 2rem;
+ }
+ .about-video {
+   width: 100%;
+   max-width: 900px;
+   height: auto;
+   border-radius: 16px;
+   display: block;
+   box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+   overflow: hidden;
+ }
     gap: 1rem;
     text-align: left;
   }
