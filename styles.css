@@ -37,21 +37,20 @@
 }
 /* Root Variables */
 :root {
-  --primary: #1e3a8a;
-  --primary-light: #3b82f6;
-  --primary-dark: #0f172a;
-  --secondary: #dc2626;
-  --accent: #9333ea;
-  --accent-light: #a855f7;
-  --dark-bg: #0a0e27;
-  --card-bg: #1a2332;
-  --card-bg-alt: #253849;
-  --border-color: #374151;
-  --border-light: #4b5563;
-  --text-primary: #e5e7eb;
-  --text-secondary: #d1d5db;
-  --text-tertiary: #9ca3af;
-  --success: #059669;
+  --primary: #0b3d91; /* deep navy blue */
+  --primary-light: #2563eb; /* brighter blue */
+  --primary-dark: #071233; /* very dark navy */
+  --secondary: #1f2937; /* slate gray */
+  --accent: #0ea5a4; /* teal accent for contrast */
+  --accent-light: #38bdf8; /* light sky accent */
+  --dark-bg: #061028; /* darker page background */
+  --card-bg: #0f1724; /* deep card background */
+  --card-bg-alt: #152233; /* alternate card bg */
+  --border-color: #263244; /* subtle dark border */
+  --border-light: #3b4a5e;
+  --text-primary: #e6eef8; /* slightly blue-tinted white */
+  --text-secondary: #cbd5e1; /* cool gray */
+  --text-tertiary: #9aa9b8;
   --danger: #be123c;
   --spacing-unit: 1rem;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
