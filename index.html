@@ -38,11 +38,38 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="portfolio-hero" id="home">
-    <div class="hero-content">
-      <h1>Foeboy Creative Solutions</h1>
-      <p>High-tech precision meets street-smart strategy</p>
+  <main class="page-sections">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Foeboy Creative Solutions</span>
+        <h1>High-tech precision meets street-smart strategy</h1>
+        <p>Creative solutions built for performance, automation, and growth.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn cta-btn">Start Your Project</a>
+          <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-ring"></div>
+        <div class="hero-hud">
+          <div class="hud-panel hud-panel-1">
+            <span class="hud-title">DATA STREAM</span>
+            <p>AI metrics • conversion index</p>
+          </div>
+          <div class="hud-panel hud-panel-2">
+            <span class="hud-title">SYSTEM</span>
+            <p>Latency 12ms • Secure node</p>
+          </div>
+          <div class="hud-panel hud-panel-3">
+            <span class="hud-title">HYPERLINK</span>
+            <p>Live flow • adaptive UI</p>
+          </div>
+        </div>
+        <div class="hero-chip">APP × AUTOMATION × BRAND</div>
+      </div>
     </div>
   </section>
 
@@ -52,9 +79,10 @@
       <h2 class="section-title">See Our Work in Action</h2>
       <p class="section-subtitle">High-quality creative content and projects</p>
       <video class="showcase-video" width="100%" height="auto" controls muted playsinline webkit-playsinline x5-playsinline preload="metadata">
-        <source src="redpandacompress-covered-ai-small.mp4" type="video/mp4">
+        <source src="iphone-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <p class="form-message">If the video does not play, download it directly <a href="iphone-video.mp4" download>here</a>.</p>
     </div>
   </section>
 
@@ -91,7 +119,7 @@
 
 
   <!-- Project Gallery Section -->
-  <section class="portfolio-section">
+  <section class="portfolio-section" id="portfolio">
     <div class="container">
       <h2 class="section-title">Project Highlights</h2>
       <p class="section-subtitle">Notable works and achievements</p>
@@ -149,22 +177,17 @@
   <section class="portfolio-section" id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">Crafting digital excellence with creativity and precision</p>
+      <p class="section-subtitle">Precision, innovation, and creative technology.</p>
       
-      <div class="about-intro-video">
-        <video class="about-video" controls muted preload="metadata">
-          <source src="about-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <div class="about-content about-grid">
-        <div class="about-image">
-          <img src="600914151_25774903882116854_6775865547604767452_n.png" alt="Foeboy Creative Solutions" loading="lazy">
+      <div class="about-grid">
+        <div class="about-text-panel">
+          <span class="eyebrow">Meet Foeboy</span>
+          <h3>Creative strategy engineered for digital impact.</h3>
+          <p>I'm Foeboy, a creative professional building bold digital experiences for brands, artists, and teams that want more than just visuals. I blend app development, automation, modern web design, and music marketing into high-performance, scalable work.</p>
+          <p>Every project is crafted with street-smart strategy, polished execution, and a relentless focus on results. From workflow automation with Make.com and Zapier to conversion-focused websites and artist branding, I deliver work that feels premium and performs reliably.</p>
         </div>
-        <div class="about-text">
-          <p>I'm Foeboy, a creative professional dedicated to delivering high-quality digital solutions. With expertise in app development, workflow automation, web design, and music marketing, I help brands and artists reach their full potential.</p>
-          <p>Every project is approached with precision, innovation, and a deep commitment to excellence. I combine technical expertise with creative vision to transform ideas into powerful digital experiences.</p>
+        <div class="about-image-panel">
+          <img src="600914151_25774903882116854_6775865547604767452_n.png" alt="Foeboy Creative Solutions" loading="lazy">
         </div>
       </div>
     </div>
@@ -225,16 +248,16 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Ready to Collaborate?</h2>
-      <p>Let's turn your vision into reality</p>
-      <a href="#contact" class="cta-btn">Start Your Project</a>
-    </div>
-  </section>
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Collaborate?</h2>
+        <p>Let's turn your vision into reality</p>
+        <a href="#contact" class="cta-btn">Start Your Project</a>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
@@ -263,6 +286,7 @@
       </div>
     </div>
   </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>

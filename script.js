@@ -55,14 +55,16 @@ if (isMobileDevice()) {
 }
 
 // Smooth scroll behavior for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+const sectionLinks = document.querySelectorAll('a[href^="#"]');
+sectionLinks.forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       target.scrollIntoView({
         behavior: 'smooth',
-        block: 'start'
+        inline: 'start',
+        block: 'nearest'
       });
     }
   });
@@ -71,16 +73,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Update active navigation link based on scroll position
 window.addEventListener('scroll', () => {
   const navLinks = document.querySelectorAll('.nav-links a');
-  
-  navLinks.forEach(link => {
-    link.classList.remove('active');
+  const sections = document.querySelectorAll('main.page-sections > section[id]');
+  let closestSection = null;
+  let closestDistance = Infinity;
+
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.left);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestSection = section;
+    }
   });
 
-  // Set active class to the current page
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   navLinks.forEach(link => {
+    link.classList.remove('active');
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    if (closestSection && href === `#${closestSection.id}`) {
       link.classList.add('active');
     }
   });
